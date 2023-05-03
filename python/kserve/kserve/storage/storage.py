@@ -115,6 +115,7 @@ class Storage(object):  # pylint: disable=too-few-public-methods
             os.environ["AWS_ENDPOINT_URL"] = storage_secret_json.get("endpoint_url", "")
             os.environ["AWS_ACCESS_KEY_ID"] = storage_secret_json.get("access_key_id", "")
             os.environ["AWS_SECRET_ACCESS_KEY"] = storage_secret_json.get("secret_access_key", "")
+            os.environ["AWS_SESSION_TOKEN"] = storage_secret_json.get("session_token", "")
             os.environ["AWS_DEFAULT_REGION"] = storage_secret_json.get("region", "")
             os.environ["AWS_CA_BUNDLE"] = storage_secret_json.get("certificate", "")
             os.environ["awsAnonymousCredential"] = storage_secret_json.get("anonymous", "")
